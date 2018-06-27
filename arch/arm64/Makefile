@@ -20,6 +20,7 @@ KBUILD_DEFCONFIG := defconfig
 KBUILD_CFLAGS	+= -mgeneral-regs-only
 KBUILD_CFLAGS	+= -fno-pic
 KBUILD_CFLAGS	+= $(call cc-option, -mpc-relative-literal-loads)
+KBUILD_CFLAGS	+= $(call cc-option,-mcpu=cortex-a53+crypto+crc)
 
 ifeq ($(cc-name),clang)
 KBUILD_CFLAGS	+= -DCONFIG_ARCH_SUPPORTS_INT128
